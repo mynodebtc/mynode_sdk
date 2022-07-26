@@ -85,7 +85,10 @@ def create_dist_tarball(app_dir, short_name):
     # Create tarball in temp
     with tempfile.TemporaryDirectory() as tmpdirname:
         app_tarball = tmpdirname + "/app.tar.gz"
-        os.system("tar -zcf {} {}".format(app_tarball, app_dir))
+        exclude_hidden_files = "--exclude='.*'"
+        if app_dir == "." or app_dir == "./":
+            exclude_hidden_files = "--exclude='.[^/]*'"
+        os.system("tar {} -zcf {} {}".format(exclude_hidden_files, app_tarball, app_dir))
         
         # Make dist folder again
         dist_folder = app_dir+"/dist"
