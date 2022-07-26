@@ -45,11 +45,20 @@ After the SDK fills out the template, there are many options available for custo
 
 Update
 - Update your app icon at *appname*.png
-- Update your service file at *appname*.service
 - Update your app info file at *appname*.json
-  - A
-  - B
+  - *author*
+  - *website*
+  - *category*
+  - *short_description*
+  - *description*
+  - *latest_version*
+  - *targz_download_url*
+  - *app_page_content*
+- Update your service file at *appname*.service
+- Update your install script at script/install_*appname*.service
 - Add your own screenshots under the *screenshots* folder
+
+Details of all the configuration options and scripts can be found in the repo for the [application template](https://github.com/mynodebtc/sdk_app_template).
 
 
 ## Manual Local Installation of SDK
