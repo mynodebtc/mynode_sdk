@@ -32,18 +32,24 @@ The appliction can be built from within the app folder or one level above.
 
 **Add Application to Device**
 
-Once the application has been built, it can be added to the device via the web interface. In the web interface, navigate Home -> Marketplace -> Add Application. On that page, select the application "tar.gz" file generated during the previous build state. After submitting the form, your app will be available for installation on your device!
+Once the application has been built, it can be added to the device via the web interface. In the web interface, navigate Home -> Marketplace -> Add Application. On that page, select the application *tar.gz* file generated during the previous build state. After submitting the form, your app will be available for installation on your device!
 
 **Share Application**
 
 After testing your application and verifying it works well, you can share it with the community!
 
-Submit a PR to the myNode project with the files you created stored under the folder "rootfs/standard/usr/share/mynode_apps/<app name id>".
+Submit a PR to the myNode project with the files you created stored under the folder *rootfs/standard/usr/share/mynode_apps/<app name id>*.
 
 ## Customizing your Application
-After the SDK fills out the template, there are many options available for customizing your app. Some customization steps are required.
+After the SDK fills out the template, there are many options available for customizing your app. Some customization steps are required. Replace *appname* with the name id of your app.
 
-TODO
+Update
+- Update your app icon at *appname*.png
+- Update your service file at *appname*.service
+- Update your app info file at *appname*.json
+  - A
+  - B
+- Add your own screenshots under the *screenshots* folder
 
 
 ## Manual Local Installation of SDK
