@@ -8,7 +8,8 @@ The simplest way to install the SDK is from [PyPi](https://pypi.org/manage/proje
 
 ## Basic Usage
 
-*Create new Application*
+**Create new Application**
+
 To create a new application, run the following command. It will prompt for several answers to properly fill out your app template. A folder based on the "App Name ID" will be created in your current folder with the template.
 
 `mynode-sdk create`
@@ -19,18 +20,22 @@ It will ask for some things:
 - Port Numbers
 - Requiring Bitcoin, Lightning, Docker, and Electrum
 
-*Update Application Files*
+**Update Application Files**
+
 After creating the application, you will need to update several things to make the app functional, like the icon, install script, screenshots, etc... More details are available in the [Customizing your Application](#customizing-your-application) section below.
 
-*Build Application*
+**Build Application**
+
 The appliction can be built from within the app folder or one level above.
 
 `mynode-sdk build <app name id>`
 
-*Add Application to Device*
+**Add Application to Device**
+
 Once the application has been built, it can be added to the device via the web interface. In the web interface, navigate Home -> Marketplace -> Add Application. On that page, select the application "tar.gz" file generated during the previous build state. After submitting the form, your app will be available for installation on your device!
 
-*Share Application*
+**Share Application**
+
 After testing your application and verifying it works well, you can share it with the community!
 
 Submit a PR to the myNode project with the files you created stored under the folder "rootfs/standard/usr/share/mynode_apps/<app name id>".
