@@ -43,7 +43,7 @@ Submit a PR to the myNode project with the files you created stored under the fo
 ## Customizing your Application
 After the SDK fills out the template, there are many options available for customizing your app. Some customization steps are required. Replace *appname* with the name id of your app.
 
-**Update**
+**Files to Update**
 
 - Update your app icon at *appname*.png
 - Update your app info file at *appname*.json
