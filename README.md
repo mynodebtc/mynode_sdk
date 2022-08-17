@@ -73,4 +73,5 @@ To manually install the SDK and to test changes, run this command.
 To publish a new SDK version:
 - Bump Version in setup.py
 - Commit and Push All Changes
+- Run `python3 -m build`
 - Run `twine upload -r pypi dist/*`
