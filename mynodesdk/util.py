@@ -79,20 +79,19 @@ def clear_dist_folder(app_dir, short_name):
         dist_filename = app_dir+"/dist/"+short_name+".tar.gz"
         if os.path.isfile(dist_filename):
             os.remove(dist_filename)
-        os.rmdir(dist_folder)
 
 def create_dist_tarball(app_dir, short_name):
     # Create tarball in temp
     with tempfile.TemporaryDirectory() as tmpdirname:
         app_tarball = tmpdirname + "/app.tar.gz"
-        exclude_hidden_files = "--exclude='.*'"
-        if app_dir == "." or app_dir == "./":
-            exclude_hidden_files = "--exclude='.[^/]*'"
-        os.system("tar {} -zcf {} {}".format(exclude_hidden_files, app_tarball, app_dir))
+        tmp_app_dir = "{}/{}".format(tmpdirname, short_name)
+        os.system("mkdir -p {}".format(tmp_app_dir))
+        os.system("rsync -a {}/ {}".format(app_dir, tmp_app_dir))
+        os.system("tar --exclude='.*' -zcf {} -C /{} {}".format(app_tarball, tmpdirname, short_name))
         
         # Make dist folder again
         dist_folder = app_dir+"/dist"
-        os.mkdir(dist_folder)
+        os.system("mkdir -p {}".format(dist_folder))
 
         # Save tarball to dist folder
         os.system("cp -f {} {}".format(app_tarball, dist_folder+"/"+short_name+".tar.gz"))
