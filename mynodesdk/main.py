@@ -111,12 +111,13 @@ def create():
 
 def build(short_name):
     # If name set, go into folder. If not, use current dir.
-    if os.path.exists("./"+short_name):
-        app_dir = "./"+short_name
+    cwd = os.getcwd()
+    if os.path.exists(cwd+"/"+short_name):
+        app_dir = cwd+"/"+short_name
         clear_dist_folder(app_dir, short_name)
         create_dist_tarball(app_dir, short_name)
-    elif os.path.exists("./"+short_name+".json"):
-        app_dir = "."
+    elif os.path.exists(cwd+"/"+short_name+".json"):
+        app_dir = cwd
         clear_dist_folder(app_dir, short_name)
         create_dist_tarball(app_dir, short_name)
     else:
