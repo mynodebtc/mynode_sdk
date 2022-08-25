@@ -33,12 +33,6 @@ The appliction can be built from within the app folder or one level above.
 ### Add Application to Device
 
 Once the application has been built, it can be added to the device via the web interface. In the web interface, navigate Home -> Marketplace -> Add Application. On that page, select the application *tar.gz* file generated during the previous build state. After submitting the form, your app will be available for installation on your device!
-
-### Share Application
-
-After testing your application and verifying it works well, you can share it with the community!
-
-Submit a PR to the myNode project with the files you created stored under the folder `rootfs/standard/usr/share/mynode_apps/<app name id>`.
   
 ## Customizing your Application
 
@@ -62,6 +56,22 @@ After the SDK fills out the template, there are many options available for custo
 
 Details of all the configuration options and scripts can be found in the repo for the [application template](https://github.com/mynodebtc/sdk_app_template).
 
+### Share Application
+
+After testing your application and verifying it works well, you can share it with the community!
+
+Submit a PR to the myNode project with the files you created stored under the folder `rootfs/standard/usr/share/mynode_apps/<app name id>`.
+
+We reserve the right to reject any apps for any reason. We will review it as part of the pull request. Some rules:
+
+- No altcoins
+- Must have applicable category
+  - Bitcoin
+  - Lightning
+  - Networking
+  - Privacy
+  - Or other similar category
+- Must be a quality application
 
 ## Manual Local Installation of SDK
 To manually install the SDK and to test changes, run this command.
