@@ -56,11 +56,11 @@ After the SDK fills out the template, there are many options available for custo
 
 Details of all the configuration options and scripts can be found in the repo for the [application template](https://github.com/mynodebtc/sdk_app_template).
 
-### Share Application
+## Publishing your Application
 
-After testing your application and verifying it works well, you can share it with the community!
+After testing your application and verifying it works well, you can publish it on the myNode platform and share it with the community!
 
-Submit a PR to the myNode project with the files you created stored under the folder `rootfs/standard/usr/share/mynode_apps/<app name id>`.
+Submit a Pull Request to the myNode project including your application folder under at `rootfs/standard/usr/share/mynode_apps/<app name id>`.
 
 We reserve the right to reject any apps for any reason. We will review it as part of the pull request. Some rules:
 
