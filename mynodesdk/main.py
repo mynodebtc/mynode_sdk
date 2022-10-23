@@ -56,12 +56,15 @@ def create():
     if prompt_yes_no("Does this application depend on an active Lightning wallet?"):
         update_app_info(app_json_file, "requires_bitcoin", True)
         update_app_info(app_json_file, "requires_lightning", True)
+        update_app_info(app_json_file, "category", "lightning_app")
     else:
         update_app_info(app_json_file, "requires_lightning", False)
         if prompt_yes_no("Does this application depend on Bitcoin?", default_val="y"):
             update_app_info(app_json_file, "requires_bitcoin", True)
+            update_app_info(app_json_file, "category", "bitcoin_app")
         else:
             update_app_info(app_json_file, "requires_bitcoin", False)
+            update_app_info(app_json_file, "category", "uncategorized")
 
     # Process application (does it depend on docker?)
     if prompt_yes_no("Does this application depend on Docker?", default_val="n"):
