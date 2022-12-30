@@ -69,6 +69,7 @@ We reserve the right to reject any apps for any reason. We will review it as par
   - Bitcoin
   - Lightning
   - Networking
+  - Communication
   - Privacy
   - Or other similar category
 - Must be a quality application
@@ -83,5 +84,5 @@ To manually install the SDK and to test changes, run this command.
 To publish a new SDK version:
 - Bump Version in setup.py
 - Commit and Push All Changes
-- Run `python3 -m build`
+- Run `python3.8 -m build`
 - Run `twine upload -r pypi dist/mynodesdk-<version>*`
