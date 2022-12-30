@@ -8,7 +8,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="mynodesdk",
-    version="0.0.3",
+    version="0.0.4",
     description="Tools for creating and managing myNode application package",
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -14,6 +14,7 @@ def create():
     short_name = generate_short_name(full_app_name)
     short_name = prompt_string("Enter the application identifier", short_name)
     app_dir = "{}/{}".format(cwd, short_name)
+    is_service = True
 
     if os.path.exists(app_dir):
         print("App folder aleady exists. Exiting.")
@@ -36,6 +37,11 @@ def create():
     replace_string_in_file(app_dir+"/nginx/https_sampleapp.conf",   "sampleapp", short_name)
     replace_string_in_file(app_dir+"/sampleapp.service",            "sampleapp", short_name)
     replace_string_in_file(app_dir+"/sampleapp.json",               "sampleapp", short_name)
+
+    # Is this a service?
+    is_service = prompt_yes_no("Is this application a service (can be enabled/disabled and not a cli tool)?")
+    if not is_service:
+        os.remove(app_dir+"/sampleapp.service")
 
     # Process application (is it a web app?)
     if prompt_yes_no("Does this application have a web-based user interface?"):
