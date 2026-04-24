@@ -58,9 +58,9 @@ Details of all the configuration options and scripts can be found in the repo fo
 
 ## Publishing your Application
 
-After testing your application and verifying it works well, you can publish it on the myNode platform and share it with the community!
+After testing your application and verifying it works well, you can publish it on the MyNode platform and share it with the community!
 
-Submit a Pull Request to the myNode project including your application folder under at `rootfs/standard/usr/share/mynode_apps/<app name id>`.
+Submit a Pull Request to the MyNode project including your application folder under at `rootfs/standard/usr/share/mynode_apps/<app name id>`.
 
 We reserve the right to reject any apps for any reason. We will review it as part of the pull request. Some rules:
 
