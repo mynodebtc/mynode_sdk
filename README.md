@@ -1,5 +1,7 @@
-# MYNODE SDK
+# MyNode SDK
 *Software Development Kit for Application Development*
+
+> **Deprecated.** MyNode applications are now created and shipped from the MyNode repo itself. Run `app_sdk/create.py` there and see the [application guide](https://github.com/mynodebtc/mynode/blob/master/doc/applications.md). This SDK built app tarballs for the "Add Application" page, which MyNode no longer has, and it is no longer maintained. Released versions on PyPI have been yanked.
 
 ## Installation
 The simplest way to install the SDK is from [PyPi](https://pypi.org/manage/project/mynodesdk/releases/) via pip.
